@@ -54,7 +54,7 @@ session_start();
                                         <h5 class="text-white">Admin</h5>
                                     </div>
                                     <div class="col-md-4">
-                                        <a href="#"><i class="fa fa-users-cog fa-3x my-4" style="color: white;"></i></a>
+                                        <a href="admin.php"><i class="fa fa-users-cog fa-3x my-4" style="color: white;"></i></a>
                                     </div>
                                 </div>
                             </div>
