@@ -2,7 +2,7 @@
 
 <head>
   <title></title>
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="./css/styles.css">
   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
@@ -37,11 +37,23 @@
         <li class="nav-item"><a href="logout.php" class="nav-link text-white">Logout</a></li>
           
              ';
+      } else if (isset($_SESSION['doctor'])) {
+
+        $user = $_SESSION['doctor'];
+
+        echo '
+
+       
+        <li class="nav-item"><a href="#" class="nav-link text-white">' . $user . '</a></li>
+        <li class="nav-item"><a href="logout.php" class="nav-link text-white">Logout</a></li>
+          
+             ';
       } else {
 
         echo '
+            <li class="nav-item"><a href="index.php" class="nav-link text-white">Home</a></li>
             <li class="nav-item"><a href="adminlogin.php" class="nav-link text-white">Admin</a></li>
-            <li class="nav-item"><a href="#" class="nav-link text-white">Doctor</a></li>
+            <li class="nav-item"><a href="doctorlogin.php" class="nav-link text-white">Doctor</a></li>
             <li class="nav-item"><a href="#" class="nav-link text-white">Patient</a></li>
           ';
       }

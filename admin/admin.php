@@ -96,6 +96,18 @@ session_start();
                                     $uname = $_POST['uname'];
                                     $pass = $_POST['pass'];
                                     $image = $_FILES['img']['name'];
+                                    $chkduplicateuname = "SELECT username from admin WHERE username ='$username'";
+
+                                    $result1 = mysqli_query($connect, $chkduplicateuname);
+
+                                    $count = mysqli_num_rows($result1);
+
+                                    if ($count > 0) {
+
+                                        echo "<h5 class='alert alert-danger'> Username is not available. Please use another username!</h5>";
+                                        echo "<a class='text-white btn btn-info' href='admin.php'>Try again</a>";
+                                        return false;
+                                    }
                                 }
 
                                 $error = array();

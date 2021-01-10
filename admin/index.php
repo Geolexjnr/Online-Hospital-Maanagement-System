@@ -62,12 +62,19 @@ session_start();
                             <div class="col-md-3 bg-info mx-2" style="height: 130px;">
                                 <div class="row">
                                     <div class="col-md-8">
-                                        <h5 class="my-2 text-white text-center" style="font-size:30px;">0</h5>
+                                        <?php
+                                        $doctor =  mysqli_query($connect, "SELECT * FROM doctors WHERE status = 'Approved'");
+
+                                        $num2 = mysqli_num_rows($doctor);
+                                        ?>
+                                        <h5 class="my-2 text-white text-center" style="font-size:30px;">
+                                            <? echo $num2; ?>
+                                        </h5>
                                         <h5 class="text-white">Total</h5>
                                         <h5 class="text-white">Doctors</h5>
                                     </div>
                                     <div class="col-md-4">
-                                        <a href="#"><i class="fa fa-user-md fa-3x my-4" style="color: white;"></i></a>
+                                        <a href="doctor.php"><i class="fa fa-user-md fa-3x my-4" style="color: white;"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -101,12 +108,22 @@ session_start();
                             <div class="col-md-3 bg-warning mx-2 my-2" style="height: 130px;">
                                 <div class="row">
                                     <div class="col-md-8">
-                                        <h5 class="my-2 text-success text-center" style="font-size:30px;">0</h5>
+
+                                        <?php
+
+                                        $job = mysqli_query($connect, "SELECT * FROM doctors 
+                                        WHERE status ='Pending'");
+
+                                        $num1 = mysqli_num_rows($job);
+
+                                        ?>
+
+                                        <h5 class="my-2 text-success text-center" style="font-size:30px;"><?php echo $num1; ?></h5>
                                         <h5 class="text-success">Total</h5>
                                         <h5 class="text-success">Job Request</h5>
                                     </div>
                                     <div class="col-md-4">
-                                        <a href="#"><i class="fas fa-user-edit fa-3x my-4" style="color: #28a745;"></i></a>
+                                        <a href="job_request.php"><i class="fas fa-user-edit fa-3x my-4" style="color: #28a745;"></i></a>
                                     </div>
                                 </div>
                             </div>
