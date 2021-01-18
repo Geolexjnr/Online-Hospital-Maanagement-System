@@ -29,7 +29,7 @@ include('include/header.php');
       <div class="col-md3 mx-1 shadow">
         <img src="img/black patient.jpg" width="340px" height="340px" alt="black patient">
         <h5 class="text-center">Create Account so that we can<br />take good care of you</h5>
-        <a href="#">
+        <a href="account.php">
           <button class="btn btn-success my-3" style="margin-left: 30%;">Create Account</button>
         </a>
       </div>

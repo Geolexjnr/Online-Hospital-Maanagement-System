@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 include("include/connection.php");
 
 if (isset($_POST['login'])) {
@@ -34,7 +36,7 @@ if (isset($_POST['login'])) {
 
             echo "<script>('done')</script>";
             $_SESSION['doctor'] = $uname;
-            //header("Location: ")
+            header("Location:doctor/index.php ");
         } else {
 
             echo "<script>alert('Invalid Application')</script>";
@@ -73,6 +75,7 @@ if (isset($error['login'])) {
                     <?php echo $show; ?>
 
                     <form method="POST">
+                        <div class="text-center"><i class="fa fa-user-md fa-8x my-4" style="color: #5bc0de;"></i></div>
                         <div class="form-group">
                             <label>Username</label>
                             <input type="text" name="uname" class="form-control" autocomplete="off" placeholder="Enter Username">
