@@ -82,12 +82,20 @@ session_start();
                             <div class="col-md-3 bg-warning mx-2" style="height: 130px;">
                                 <div class="row">
                                     <div class="col-md-8">
-                                        <h5 class="my-2 text-success text-center" style="font-size:30px;">0</h5>
+
+                                        <?php
+                                        $p = mysqli_query($connect, "SELECT * FROM patient");
+
+                                        $pp = mysqli_num_rows($p);
+
+                                        ?>
+
+                                        <h5 class="my-2 text-success text-center" style="font-size:30px;"><?php echo $pp; ?></h5>
                                         <h5 class="text-success">Total</h5>
                                         <h5 class="text-success">Patients</h5>
                                     </div>
                                     <div class="col-md-4">
-                                        <a href="#"><i class="fa fa-procedures fa-3x my-4" style="color: #28a745;"></i></a>
+                                        <a href="patient.php"><i class="fa fa-procedures fa-3x my-4" style="color: #28a745;"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -95,12 +103,19 @@ session_start();
                             <div class="col-md-3 bg-danger mx-2 my-2" style="height: 130px;">
                                 <div class="row">
                                     <div class="col-md-8">
-                                        <h5 class="my-2 text-white text-center" style="font-size:30px;">0</h5>
+                                        <?php
+
+                                        $call = mysqli_query($connect, "SELECT * FROM report");
+                                        $response = mysqli_num_rows($call);
+
+
+                                        ?>
+                                        <h5 class="my-2 text-white text-center" style="font-size:30px;"><?php echo $response ?></h5>
                                         <h5 class="text-white">Total</h5>
                                         <h5 class="text-white">Report</h5>
                                     </div>
                                     <div class="col-md-4">
-                                        <a href="#"><i class="fas fa-notes-medical fa-3x my-4" style="color: white;"></i></a>
+                                        <a href="report.php"><i class="fas fa-notes-medical fa-3x my-4" style="color: white;"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -131,12 +146,23 @@ session_start();
                             <div class="col-md-3 bg-success mx-2 my-2" style="height: 130px;">
                                 <div class="row">
                                     <div class="col-md-8">
-                                        <h5 class="my-2 text-white text-center" style="font-size:30px;">0</h5>
+
+                                        <?php
+
+                                        $in = mysqli_query($connect, "SELECT sum(amount_paid) as profit FROM income");
+
+                                        $row = mysqli_fetch_array($in);
+
+                                        $inc = $row['profit'];
+
+                                        ?>
+                                        <h5 class="my-2 text-white text-center" style="font-size:30px;"><?php echo "$$inc" ?></h5>
                                         <h5 class="text-white">Total</h5>
-                                        <h5 class="text-white">Job Request</h5>
+                                        <h5 class="text-white">Income</h5>
                                     </div>
                                     <div class="col-md-4">
-                                        <a href="#"><i class="far fa-money-bill-alt fa-3x my-4" style="color: white;"></i></a>
+                                        <a href="income.php"><i class="far fa-money-bill-alt fa-3x my-4" style="color: white;"></i></a>
+
                                     </div>
                                 </div>
                             </div>

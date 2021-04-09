@@ -14,7 +14,7 @@
         <a href="profile.php" class="list-group-item list-group-item-action bg-info 
                         text-center text-white">Profile</a>
         <a href="doctor.php" class="list-group-item list-group-item-action bg-info 
-                        text-center text-white">Book an Appointments</a>
+                        text-center text-white">Book an Appointment</a>
         <a href="" class="list-group-item list-group-item-action bg-info 
                         text-center text-white">Reports</a>
         <a href="" class="list-group-item list-group-item-action bg-info 
