@@ -74,10 +74,9 @@
                                 <td>" . $row['symptoms'] . "</td>
                                 <td>" . $row['date_booked'] . "</td>
                                 <td>
-                                
-                                    <a href = 'discharge.php?id =" . $row['id'] . "'>
-                                    <button class ='btn btn-info'>Check</button>
-                                    </a>
+
+                                    <a href = 'discharge.php?id=" . $row['id'] . "'><button class ='btn btn-info'>check</button</a>
+                                                                        
                                 
                                 </td>
                             

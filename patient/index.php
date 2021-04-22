@@ -55,11 +55,11 @@ session_start();
 
                                     <div class="row">
                                         <div class="col-md-8">
-                                            <h5 class="text-white my-4">Make an Appointment</h5>
+                                            <h5 class="text-success my-4">Make an Appointment</h5>
                                         </div>
                                         <div class="col-md-4">
                                             <a href="appointment.php">
-                                                <i class="fa fa-calendar fa-3x my-4" style="color: white;"></i>
+                                                <i class="fa fa-calendar fa-3x my-4" style="color: #42ba96;"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -75,7 +75,7 @@ session_start();
                                             <h5 class="text-white my-4">My Invoice</h5>
                                         </div>
                                         <div class="col-md-4">
-                                            <a href="#">
+                                            <a href="invoice.php">
                                                 <i class="fas fa-file-invoice-dollar fa-3x my-4" style="color: white;"></i>
                                             </a>
                                         </div>

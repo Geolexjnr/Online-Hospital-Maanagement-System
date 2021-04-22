@@ -72,7 +72,7 @@ session_start();
                                         <div class="row">
                                             <div class="col-md-8">
                                                 <?php
-                                                $app = mysqli_query($connect, "SELECT * FROM appointment");
+                                                $app = mysqli_query($connect, "SELECT * FROM appointment WHERE status = 'Pending'");
 
                                                 $appoint = mysqli_num_rows($app);
                                                 ?>
